@@ -8,7 +8,7 @@
     "generate-redirects": "node src/scripts/generate-redirects.mjs",
     "netlify-build": "yarn run copy-assets && next build && next-sitemap && next export && yarn run generate-redirects",
     "build": "next build",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap --config next-sitemap.config.mjs",
     "check-links": "node src/scripts/check-links.mjs",
     "check-all-links": "find ./content -name \\*.md -exec markdown-link-check --quiet {} \\;",
     "typecheck": "tsc -p .",
@@ -21,11 +21,13 @@
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "typescript-json-decoder": "^1.0.10",
     "wagmi": "^0.5.11"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
     "@types/jest": "^28.1.6",
     "@types/node": "18.0.6",
     "@types/react": "18.0.15",
@@ -33,8 +35,14 @@
     "eslint": "8.20.0",
     "eslint-config-next": "12.2.3",
     "jest": "^28.1.3",
+    "next-sitemap": "^3.1.11",
     "prettier": "^2.7.1",
     "ts-jest": "^28.0.7",
     "typescript": "4.7.4"
+  },
+  "nextBundleAnalysis": {
+    "budget": 665600,
+    "budgetPercentIncreaseRed": 25,
+    "showDetails": true
   }
 }
