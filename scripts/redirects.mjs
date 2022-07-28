@@ -10,8 +10,6 @@ import { getMovedPagesFromHistory } from './getMovedPagesFromHistory.mjs'
 export function cleanupRedirects(movedPages) {
     // Build a map of the redirects, so that we can detect cycles and resolve
     // redirect chains.
-    // See https://github.com/sourcegraph/handbook/issues/1403 for a case that
-    // is not handled by this logic.
     const redirects = new Map()
     for (const { source, destination } of movedPages) {
         const nextRedirect = redirects.get(destination)
@@ -36,8 +34,8 @@ export default async function redirects() {
 
         // Add custom redirects
         {
-            source: '/careers',
-            destination: 'https://about.sourcegraph.com/jobs',
+            source: '/tests',
+            destination: 'https://wagmi-cache.netlify.app/tests',
         },
     ])
 }

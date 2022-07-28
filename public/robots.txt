@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://nextjs-tsweb3.netlify.app
+Host: wagmi-cache.netlify.app
 
 # Sitemaps
-Sitemap: https://nextjs-tsweb3.netlify.app/sitemap.xml
+Sitemap: wagmi-cache.netlify.app/sitemap.xml
