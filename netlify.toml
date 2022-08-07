@@ -1,6 +1,6 @@
 [build]
 command = "yarn run netlify-build"
-publish = "out"
+publish = ".next"
 
 # https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing
 # If skip_processing = true, all other settings are ignored
